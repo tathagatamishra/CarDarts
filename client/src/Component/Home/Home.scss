@@ -1,0 +1,39 @@
+.Home {
+    border: solid 2px rgb(255, 0, 0);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: fit-content;
+
+    & .car-show {
+
+        border: solid 2px rgb(255, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: fit-content;
+        margin-top: 10px;
+
+        & .car-card {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex: 0 0 calc(250px - 20px);
+            margin: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+
+            @media screen and (max-width: 768px) {
+                margin: 5px;
+                flex: 0 0 calc(250px - 20px);
+            }
+        }
+    }
+}
