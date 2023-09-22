@@ -5,7 +5,8 @@ import axios from "axios";
 export default function Home() {
   const [cars, setCars] = useState(null);
 
-  const BASE_URL = "http://localhost:5000";
+  // const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://car-darts.vercel.app";
 
   // Fetching Data
   useEffect(() => {

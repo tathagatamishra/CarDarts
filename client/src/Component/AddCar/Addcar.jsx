@@ -10,7 +10,8 @@ export default function Addcar() {
   const [pin, setPin] = useState();
   const [image, setImage] = useState();
 
-  const BASE_URL = "http://localhost:5000";
+  // const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://car-darts.vercel.app";
 
   function addCar() {
 
