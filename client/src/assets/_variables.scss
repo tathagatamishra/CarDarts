@@ -7,7 +7,9 @@
 // easier to identify
 
 $---card-shadow: 0 0 10px rgba(0, 0, 0, 0.265);
-$---card-dark-shadow: 0 0 10px rgba(0, 0, 0, 0.600);
+$---card-shadow-mid: 0 0 5px rgba(0, 0, 0, 0.265);
+$---card-shadow-light: 0 0 5px rgba(0, 0, 0, 0.348);
+$---card-dark-shadow: 0 0 10px rgb(0, 0, 0);
 $---dark-shadow-color: rgba(0, 0, 0, 0.600);
 
 $---card-dark-outline: solid 2px black;

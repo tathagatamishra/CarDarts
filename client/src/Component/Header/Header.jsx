@@ -6,7 +6,7 @@ import { useDarkMode } from "../../assets/DarkModeContext";
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
-  const [thisPage, setThisPage] = useState(false);
+  const [thisPage, setThisPage] = useState();
 
   function page() {
     if (thisPage == true) {
@@ -31,7 +31,6 @@ export default function Header() {
             <button>Add Car</button>
           </NavLink>
         )}
-        <button>Start Here</button>
       </div>
     </div>
   );

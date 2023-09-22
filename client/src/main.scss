@@ -4,8 +4,9 @@
     outline: none;
     box-sizing: border-box;
     user-select: none;
+    font-family: "Open Sans", sans-serif;
 
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), auto !important;
+    cursor: url(https://cur.cursors-4u.net/mechanics/mec-1/mec59.cur), auto !important;
 
     &::selection {
         color: #000000;
@@ -14,6 +15,7 @@
     }
 
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Lilita+One&family=Open+Sans&display=swap');
 
 // html,
@@ -25,11 +27,17 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 
-    // background-color: rgb(32, 28, 43);
-    background: whitesmoke;
-    background-image: radial-gradient(white 2px, transparent 0%);
-    background-size: 15px 15px;
-    background-repeat: repeat;
+    background-color: whitesmoke;
+    // background: whitesmoke;
+    // background: whitesmoke;
+    // background-image: radial-gradient(white 2px, transparent 0%);
+    // background-size: 15px 15px;
+    // background-repeat: repeat;
+
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#000000 0.5px, transparent 0.5px), radial-gradient(#f74444 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
 
     // transition: 100ms;
 
@@ -45,4 +53,3 @@ body {
         border-bottom: solid 10px rgb(0, 230, 255);
     }
 }
-

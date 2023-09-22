@@ -1,38 +1,102 @@
+@import '../../assets/variables';
+
 .Home {
-    border: solid 2px rgb(255, 0, 0);
+    // border: solid 2px rgb(255, 0, 0);
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100vh;
+    min-height: calc(100vh - 160px);
     height: fit-content;
 
     & .car-show {
 
-        border: solid 2px rgb(255, 0, 0);
+        // border: solid 2px rgb(255, 0, 0);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         width: fit-content;
         margin-top: 10px;
+        overflow: hidden;
 
         & .car-card {
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 20px;
+            position: relative;
+            background-color: white;
+            color: black;
             text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            flex: 0 0 calc(250px - 20px);
-            margin: 5px;
+            border: 2px solid rgb(229, 225, 253);
+            border-radius: 10px;
+            width: 350px;
+            height: 250px;
+            margin: 10px;
             box-sizing: border-box;
-            border: 1px solid #ddd;
-            padding: 15px;
             text-align: center;
+            box-shadow: $---card-shadow-light;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
 
-            @media screen and (max-width: 768px) {
-                margin: 5px;
-                flex: 0 0 calc(250px - 20px);
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s;
+            }
+
+            &:hover {
+                & img {
+                    transform: scale(110%);
+                }
+            }
+
+            & .details {
+                border-top: 1px rgb(229, 225, 253) solid;
+                position: absolute;
+                width: 347px;
+                height: 50%;
+                padding: 15px 10px;
+                background: hsl(0 0% 100% / 0.5);
+                backdrop-filter: blur(20px);
+
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-decoration: none;
+                color: black;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                & div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                & .color {
+                    height: 100%;
+                    width: 50px;
+                    border: 2px solid wheat;
+                    border-radius: 10px;
+                }
+
+                & .text {
+                    width: 65px;
+                    // border: 1px solid;
+                    margin: 0;
+                    color: rgb(50, 31, 137);
+                    margin-right: 5px;
+                }
+
+                & p {
+                    margin: 0;
+                    text-align: left;
+                    display: flex;
+                }
             }
         }
     }

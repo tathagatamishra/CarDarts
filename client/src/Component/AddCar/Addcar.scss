@@ -1,9 +1,144 @@
+@import '../../assets/variables';
+
 .Addcar {
-    border: solid 1px dodgerblue;
-    margin-bottom: 10px;
+    // border: solid 2px rgb(255, 0, 0);
+    // margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100vh;
+    min-height: calc(100vh - 160px);
     height: fit-content;
+
+    & .add-card {
+        width: 800px;
+        height: fit-content;
+        padding: 30px 30px 50px 30px;
+        margin: 50px;
+
+        border-radius: 10px;
+        // border: solid #ddd 1px;
+        background: white;
+        background-image: radial-gradient(whitesmoke 2px, transparent 0%);
+        background-size: 15px 15px;
+        background-repeat: repeat;
+        box-shadow: $---card-shadow;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            width: 100%;
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 20px;
+
+            font-size: 20px;
+            font-weight: 900;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000000;
+        }
+
+        & .inputs {
+            &:nth-child(4) {
+                width: 180px;
+            }
+
+            &:nth-child(7) {
+                width: 180px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 240px;
+            height: 100px;
+            margin: 10px;
+            // border: red solid 1px;
+
+            & p {
+                width: 100%;
+                margin: 10px;
+                text-align: left;
+                font-size: 15px;
+                font-weight: 600;
+                font-family: "Open Sans", sans-serif;
+                letter-spacing: 2px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #000000;
+                // border: 1px solid;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+            }
+
+            & input {
+                width: 100%;
+                height: 45px;
+                outline: none;
+
+                border-radius: 5px;
+                border: 3px solid rgb(98, 98, 102);
+                background-color: white;
+                box-shadow: $---card-shadow-mid;
+
+                font-size: 20px;
+                color: black;
+                padding: 0 10px;
+                font-family: 'Karla', sans-serif;
+            }
+        }
+
+        & .btn {
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            // border: solid red 1px;
+
+            & button {
+                transition: 300ms;
+                height: 50px;
+                min-width: fit-content;
+                width: 150px;
+                // margin-left: 30px;
+                margin-right: 25px;
+                padding: 0.25em 1em;
+
+                float: right;
+                position: relative;
+
+                font-size: 17px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #000000;
+
+                outline: none;
+                border-radius: 5px;
+                border: 3px solid rgb(78, 78, 78);
+                background-color: white;
+                box-shadow: 5px 5px 0px rgb(78, 78, 78);
+
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+
+                &:active {
+                    box-shadow: 0px 0px 0px 0px;
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+        }
+    }
 }
