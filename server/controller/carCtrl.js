@@ -4,10 +4,21 @@ exports.create = async (req, res) => {
   try {
     const data = req.body;
 
+    let exData = await carModel.findOne({
+      $or: [{ reg: data.reg }, { name: data.name }],
+    });
+
+    if (exData) {
+      return res.status(200).send({
+        status: false,
+        message: "Registration no. / Dealer name already exist !",
+      });
+    }
+
     let createdData = await carModel.create(data);
     return res.status(201).send({
       status: true,
-      message: "Task created successfully 😃",
+      message: "Car created successfully 😃",
       data: createdData,
     });
   } catch (err) {

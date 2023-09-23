@@ -10,18 +10,20 @@ export default function Addcar() {
   const [pin, setPin] = useState();
   const [image, setImage] = useState();
 
+  const [warning, setWarning] = useState(false);
+  const [saved, setSaved] = useState(false);
+
   // const BASE_URL = "http://localhost:5000";
   const BASE_URL = "https://car-darts.vercel.app";
 
   function addCar() {
-
     let carData = {
       model: carModel,
       reg: reg,
       color: color,
       name: name,
       pin: pin,
-      image: image
+      image: image,
     };
 
     console.log(carData);
@@ -29,10 +31,22 @@ export default function Addcar() {
     axios
       .post(`${BASE_URL}/create`, carData)
       .then((res) => {
+
+        if (res.data.status) {
+          setSaved(true);
+          setWarning(false);
+        } else {
+          setSaved(false);
+          setWarning(true);
+        }
         console.log(res.data);
+
+        setTimeout(() => {
+          setSaved(false);
+          setWarning(false);
+        }, 5000);
       })
       .catch((err) => {
-        alert(err.message);
         console.log(err);
       });
   }
@@ -81,15 +95,22 @@ export default function Addcar() {
             onChange={(e) => setPin(e.target.value)}
           />
         </div>
-        <div className="inputs"><p htmlFor="">Product Image</p>
+        <div className="inputs">
+          <p htmlFor="">Product Image</p>
           <input
             type="text"
             placeholder="car image link"
             onChange={(e) => setImage(e.target.value)}
-          /></div>
+          />
+        </div>
 
         <div className="btn">
-          <button onClick={()=>addCar()}>Submit</button>
+          {warning ? (
+            <p>Registration no. / Dealer name already exist !</p>
+          ) : null}
+          {saved ? <p>Data saved successfully !</p> : null}
+          <div></div>
+          <button onClick={() => addCar()}>Submit</button>
         </div>
       </div>
     </div>
